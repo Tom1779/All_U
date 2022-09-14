@@ -2,6 +2,7 @@
 import 'dart:ui';
 import 'Widgets/appbar.dart';
 import 'Widgets/sidebar.dart';
+import 'Widgets/home_page_middle.dart';
 
 import 'package:flutter/material.dart';
 
@@ -60,27 +61,7 @@ class AllU extends StatelessWidget {
                   ]),
                 ),
               ),
-              Expanded(
-                flex: 4,
-                child: Container(
-                  decoration: BoxDecoration(
-                    color: Color.fromRGBO(48, 52, 52, 1),
-                    border: Border.all(color: Color.fromRGBO(85, 85, 85, 25)),
-                    borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(10),
-                      topLeft: Radius.circular(10),
-                    ),
-                  ),
-                  child: Column(
-                    children: [
-                      const Text(
-                        "Home",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              home_page_middle(),
               Expanded(
                 flex: 2,
                 child: Container(
