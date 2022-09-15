@@ -3,6 +3,8 @@ import '../page/settings_page.dart';
 import '../page/messages_page.dart';
 import '../page/leaderboard_page.dart';
 import '../page/analytics_page.dart';
+import '../page/profile_page.dart';
+import 'package:flutter_profile_picture/flutter_profile_picture.dart';
 
 class NavigationDrawer extends StatelessWidget {
   final padding = EdgeInsets.symmetric(horizontal: 20);
@@ -15,36 +17,61 @@ class NavigationDrawer extends StatelessWidget {
           padding: padding,
           children: [
             const SizedBox(
-              height: 48,
+              height: 20,
             ),
+            Stack(
+              alignment: Alignment(-0.9, 1),
+              children: [
+                ProfilePicture(
+                  name: 'Aditya Dharmawan Saputra',
+                  role: 'ADMINISTRATOR',
+                  radius: 31,
+                  fontsize: 21,
+                  tooltip: true,
+                  img: 'https://avatars.githubusercontent.com/u/37553901?v=4',
+                ),
+              ],
+            ),
+            Stack(
+              alignment: Alignment.bottomLeft,
+              children: [
+                Text(
+                  "Jared Hartwig",
+                  style: TextStyle(fontSize: 14),
+                ),
+              ],
+            ),
+            const SizedBox(
+              height: 28,
+            ),
+            buildMenuItem(
+              text: "Profile",
+              icon: Icons.account_circle_rounded,
+              onClicked: () => selectedItem(context, 0),
+            ),
+            CustomDivider(),
             buildMenuItem(
               text: "Settings",
               icon: Icons.settings,
-              onClicked: () => selectedItem(context, 0),
+              onClicked: () => selectedItem(context, 1),
             ),
-            const SizedBox(height: 8),
-            Divider(color: Color(0xb36f0303)),
-            const SizedBox(height: 8),
+            CustomDivider(),
             buildMenuItem(
               text: "Messages",
               icon: Icons.message_rounded,
-              onClicked: () => selectedItem(context, 1),
+              onClicked: () => selectedItem(context, 2),
             ),
-            const SizedBox(height: 8),
-            Divider(color: Color(0xb36f0303)),
-            const SizedBox(height: 8),
+            CustomDivider(),
             buildMenuItem(
               text: "Analytics",
               icon: Icons.analytics_outlined,
-              onClicked: () => selectedItem(context, 2),
+              onClicked: () => selectedItem(context, 3),
             ),
-            const SizedBox(height: 8),
-            Divider(color: Color(0xb36f0303)),
-            const SizedBox(height: 8),
+            CustomDivider(),
             buildMenuItem(
               text: "Leaderboard",
               icon: Icons.leaderboard,
-              onClicked: () => selectedItem(context, 3),
+              onClicked: () => selectedItem(context, 4),
             ),
           ],
         ),
@@ -82,25 +109,32 @@ class NavigationDrawer extends StatelessWidget {
       case 0:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => SettingsPage(),
+            builder: (context) => ProfilePage(),
           ),
         );
         break;
       case 1:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => MessagesPage(),
+            builder: (context) => SettingsPage(),
           ),
         );
         break;
       case 2:
         Navigator.of(context).push(
           MaterialPageRoute(
-            builder: (context) => AnalyticsPage(),
+            builder: (context) => MessagesPage(),
           ),
         );
         break;
       case 3:
+        Navigator.of(context).push(
+          MaterialPageRoute(
+            builder: (context) => AnalyticsPage(),
+          ),
+        );
+        break;
+      case 4:
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (context) => LeaderboardPage(),
@@ -108,5 +142,25 @@ class NavigationDrawer extends StatelessWidget {
         );
         break;
     }
+  }
+}
+
+class CustomDivider extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        SizedBox(
+          height: 10.0,
+          child: new Center(
+            child: new Container(
+              margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
+              height: 2.0,
+              color: Color(0xb36f0303),
+            ),
+          ),
+        ),
+      ],
+    );
   }
 }
