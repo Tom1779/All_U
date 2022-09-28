@@ -3,6 +3,9 @@ import 'dart:ui';
 import 'Widgets/appbar.dart';
 import 'Widgets/sidebar.dart';
 import 'Widgets/home_page_middle.dart';
+import 'Widgets/home_page_right.dart';
+import 'Widgets/home_page_left.dart';
+import 'theme/theme.dart';
 
 import 'package:flutter/material.dart';
 
@@ -15,17 +18,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: "All U",
-      theme: ThemeData(
-        textTheme: TextTheme(
-          bodyText2: TextStyle(
-            fontSize: 14.0,
-            fontFamily: 'AlmaSans',
-            fontWeight: FontWeight.bold,
-          ),
-        ).apply(
-          bodyColor: Colors.white70,
-        ),
-      ),
+      theme: app_theme(),
       home: AllU(),
       debugShowCheckedModeBanner: false,
     );
@@ -46,42 +39,9 @@ class AllU extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Color.fromRGBO(4, 172, 181, 255),
-                  child: Column(children: [
-                    FittedBox(
-                      fit: BoxFit.contain,
-                      child: const Text(
-                        "Side Bar",
-                        style: TextStyle(fontWeight: FontWeight.bold),
-                      ),
-                    ),
-                  ]),
-                ),
-              ),
+              home_page_left(),
               home_page_middle(),
-              Expanded(
-                flex: 2,
-                child: Container(
-                  color: Color.fromRGBO(19, 20, 23, 25),
-                  child: Column(
-                    children: [
-                      FittedBox(
-                        fit: BoxFit.contain,
-                        child: const Text(
-                          "Recommendations",
-                          style: TextStyle(fontWeight: FontWeight.bold),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 10,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              home_page_right(),
             ],
           ),
         ),

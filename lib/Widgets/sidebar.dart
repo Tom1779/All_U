@@ -85,7 +85,7 @@ class NavigationDrawer extends StatelessWidget {
     VoidCallback? onClicked,
   }) {
     final color = Colors.white70;
-    final hoverColor = Color(0xb36f0303);
+    final hoverColor = Color.fromRGBO(33, 149, 242, 1);
 
     return ListTile(
       leading: Icon(
@@ -156,7 +156,7 @@ class CustomDivider extends StatelessWidget {
             child: new Container(
               margin: new EdgeInsetsDirectional.only(start: 1.0, end: 1.0),
               height: 2.0,
-              color: Color(0xb36f0303),
+              color: Color.fromRGBO(33, 149, 242, 1),
             ),
           ),
         ),
