@@ -1,10 +1,12 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import '../theme/theme.dart';
 
 class Appbar extends AppBar {
   Appbar()
       : super(
+          iconTheme: IconThemeData(color: Color.fromRGBO(33, 149, 242, 1)),
           automaticallyImplyLeading: false,
           backgroundColor: Color(0xff131417),
           actions: <Widget>[
@@ -17,7 +19,6 @@ class Appbar extends AppBar {
                   },
                   icon: Icon(
                     Icons.menu,
-                    color: Color.fromRGBO(33, 149, 242, 1),
                   ),
                   iconSize: 30,
                   splashRadius: 20,
@@ -58,7 +59,6 @@ class Appbar extends AppBar {
                 onPressed: () {},
                 icon: Icon(
                   Icons.circle_notifications,
-                  color: Color.fromRGBO(33, 149, 242, 1),
                 ),
                 iconSize: 30,
                 splashRadius: 20,
@@ -70,7 +70,6 @@ class Appbar extends AppBar {
                 onPressed: () {},
                 icon: Icon(
                   Icons.account_circle_rounded,
-                  color: Color.fromRGBO(33, 149, 242, 1),
                 ),
                 iconSize: 30,
                 splashRadius: 20,
