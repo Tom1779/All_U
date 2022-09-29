@@ -1,24 +1,22 @@
-# hello_world
-
-A new Flutter project created with https://flutlab.io
+# Welcome to All U Github!
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+This project is being developed using FlutLab - A Flutter Online IDE
 
-A few resources to get you started if this is your first Flutter project:
 
+Flutter+Dart Resources:
+- https://flutter.dev/docs
+- https://dart.dev/guides
+
+FlutLab Resources:
+- https://flutlab.io/docs
 - https://flutter.dev/docs/get-started/codelab
 - https://flutter.dev/docs/cookbook
 
-For help getting started with Flutter, view our
-https://flutter.dev/docs, which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Project documentaion
 
-## Getting Started: FlutLab - Flutter Online IDE
+For a project overview, description, requirements, and more see the [wiki page](https://github.com/Tom1779/All_U/wiki)
 
-- How to use FlutLab? Please, view our https://flutlab.io/docs
-- Discover a marketplace of ready-to-use Flutter projects https://flutlab.io/widgetbay
-- Join the discussion and conversation on https://flutlab.io/residents
 
-If you have some questions regarding FlutLab, you can ask on https://flutlab.io/faq
+
