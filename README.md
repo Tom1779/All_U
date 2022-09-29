@@ -2,7 +2,7 @@
 
 ## Getting Started
 
-This project is being developed using FlutLab - A Flutter Online IDE
+This project is being developed using FlutLab - A Flutter Online IDE. Below are usefull links for reference.
 
 Flutter+Dart Resources:
 - https://flutter.dev/docs
