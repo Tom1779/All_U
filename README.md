@@ -1,4 +1,4 @@
-# Welcome to All U Github!
+# Welcome to All U!
 
 ## Getting Started
 
